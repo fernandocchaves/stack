@@ -1,5 +1,6 @@
 class AnwsersController < ApplicationController
   before_action :set_anwser, only: [:show, :edit, :update, :destroy]
+  before_action :require_login, only: [:new, :edit, :update, :destroy]
 
   # GET /anwsers/new
   def new
